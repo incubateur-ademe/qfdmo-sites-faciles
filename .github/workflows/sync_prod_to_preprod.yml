@@ -43,7 +43,7 @@ jobs:
       - name: Execute migrations in one-off container
         run: |
           scalingo --app ${PREPROD_APP} run python manage.py migrate
-      - name: Execute migrations in one-off container
+      - name: Update index in one-off container
         run: |
           scalingo --app ${PREPROD_APP} run python manage.py update_index
 
